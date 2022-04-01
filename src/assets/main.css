@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @layer components {
+        .masonry {
+            column-gap: 1.5em;
+            column-count: 1;
+        }
+        .masonry-sm {
+            column-gap: 1.5em;
+            column-count: 2;
+        }
+        .masonry-lg {
+            column-gap: 1.5em;
+            column-count: 3;
+            row-gap: 1.5rem;
+        }
+
+        .masonry-xl {
+            column-gap: 1.5em;
+            column-count: 4;
+        }
+        .break-inside {
+            break-inside: avoid;
+        }
+
+    }
+}
+
+
+
+.container{
+    @apply mx-auto;
+}
+
+.full-page-wrap{
+    @apply w-full;
+    min-height: calc(100vh - theme('height.20'));
+}
+
+.form-control{
+    @apply mt-8;
+}
+
+.btn{
+    @apply rounded-full uppercase px-12 py-3 text-sm tracking-wide;
+}
+
+.popup-menu{
+    @apply origin-top-right absolute z-20 right-4 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+
+.profile-dropdown-menu{
+    @apply origin-top-right absolute z-20 top-16 right-4 my-2 w-60 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+}
+
+.dropdown-link{
+    @apply  text-gray-700 px-4 py-2 text-sm text-left w-full flex items-center;
+}
+
+.note-item{
+    min-height: 12rem;
+}
+
+.bg-font{
+    font-size: 40rem;
+    text-align: center;
+    line-height: 0;
+    position: absolute;
+    bottom: -8rem;
+    left: 0;
+    z-index: 0;
+    opacity: 0.03;
+}
